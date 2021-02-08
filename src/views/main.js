@@ -47,14 +47,15 @@ class MainView extends LitElement {
     }
 
     handleAdd({detail}) {
-        const findEl = this.data.find(el => el.email === detail.email);
+        const findEl = this.data.find(el => el.id === detail.id);
         this.edit = null;
 
         if(findEl) {
-            return;
+            this.data = this.data.map(el => el.id === detail.id ? detail : el);
+        } else {
+            this.data = [...this.data, detail];
         }
 
-        this.data = [...this.data, detail];
         localStorage.setItem('users', JSON.stringify(this.data))
     }
 

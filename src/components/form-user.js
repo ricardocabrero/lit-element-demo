@@ -49,7 +49,7 @@ class FormUser extends LitElement {
                 name: this.name,
                 website: this.website,
                 email: this.email,
-                id: new Date().getTime()
+                id: this.edit ? this.edit.id : new Date().getTime()
             } 
         }))      
     }
@@ -69,11 +69,12 @@ class FormUser extends LitElement {
             return;
         }
         
-        const { name, website, email } = this.edit;
+        const { name, website, email, id } = this.edit;
         
         this.name = name;
         this.website = website;
         this.email = email;
+        this.id = id;
     }
 
     connectedCallback() {

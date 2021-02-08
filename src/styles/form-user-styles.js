@@ -24,13 +24,13 @@ export const styles = css`
     }
     legend {
         text-indent: -4px;
-        letter-spacing: 0.5px;
-        fon-size: 18px;
+        letter-spacing: 0.2px;
+        font-size: 20px;
     }
     @media(max-width: 450px) {
         legend  p {
             margin: 0 0 10px;
-            font-size: 16px;
+            font-size: 18px;
         }
     }
     label {
@@ -38,6 +38,11 @@ export const styles = css`
         font-size: 13px;
         color: #aaa;
         margin-bottom: 3px;
+    }
+    @media(max-width: 680px) {
+        label {
+            font-size: 14px;
+        }
     }
     input {
         width: 100%;
@@ -63,6 +68,24 @@ export const styles = css`
     }
     input:-moz-placeholder { 
         color: pink;
+    }
+
+    @media(max-width: 680px) {
+        input {
+            font-size: 14px;
+        }
+        input::-webkit-input-placeholder { 
+            font-size: 14px;
+        }
+        input::-moz-placeholder { 
+            font-size: 14px;
+        }
+        input:-ms-input-placeholder { 
+            font-size: 14px;
+        }
+        input:-moz-placeholder { 
+            font-size: 14px;
+        }
     }
 
     button {

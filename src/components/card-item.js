@@ -32,7 +32,8 @@ class CardItem extends LitElement {
             detail: {
                 name: this.name,
                 website: this.website,
-                email: this.email
+                email: this.email,
+                id: this.id
             } 
         }))
     }

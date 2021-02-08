@@ -48,6 +48,11 @@ export const styles = css`
         outline:none;
         letter-spacing: .6px;
     }
+    @media(max-width: 680px) {
+        button {
+            font-size: 15px;
+        }
+    }
     button:first-child {
         margin-right: 5px;
     }`
